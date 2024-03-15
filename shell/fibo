@@ -1,0 +1,17 @@
+function Fibonacci ($n) {
+    if ($n -eq 0) {
+        return 0
+    }
+    elseif ($n -eq 1) {
+        return 1
+    }
+    else {
+        return (Fibonacci($n - 1)) + (Fibonacci($n - 2))
+    }
+}
+
+do {
+    $num = Read-Host "Introduce un número positivo"
+} while ($num -le 0)
+
+Write-Host "El número en la posición de fibonacci $num es $(Fibonacci $num)"

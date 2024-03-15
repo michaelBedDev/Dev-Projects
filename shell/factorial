@@ -1,0 +1,12 @@
+function Factorial($n){
+    if ($n -eq 0){
+        return 1
+    }
+    return $n * (Factorial($n-1))
+}
+
+do {
+    $factor = Read-Host "Introduce un número"
+} while ($factor -le 0)
+
+Write-Host "El factorial de $factor es $(Factorial $factor)"
